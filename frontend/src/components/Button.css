@@ -1,0 +1,21 @@
+.btn {
+	/*height: 30px;*/
+	width: 100%;
+	border-radius: 3px;
+	padding: 10px;
+	background-color: transparent;
+	border: none;
+	margin-bottom: 20px;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 1em;
+}
+
+.btn-primary {
+	background-color: #979387;
+	color: white;
+}
+
+.btn-secondary {
+	border: 1px solid #979387;
+	color: #979387;
+}

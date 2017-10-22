@@ -1,0 +1,53 @@
+
+.login-contianer {
+	width: 75%;
+	margin: auto;
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(auto, auto);
+  position: relative;
+}
+.one {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+	bottom: -9px;
+}
+.two { 
+  grid-column: 2;
+  grid-row: 1;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+	bottom: -9px;
+}
+.four {
+  grid-column: 2;
+  grid-row: 2;
+}
+.five {
+  grid-column: 1;
+  grid-row: 3;
+}
+.six {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  .login-contianer {
+    width: 100%;
+  }
+}

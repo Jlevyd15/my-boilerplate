@@ -15,6 +15,7 @@
     "passport": "^0.4.0",
     "passport-jwt": "^3.0.0",
     "pug": "~2.0.0-beta11",
+    "redux-bug-reporter": "^1.2.0",
     "serve-favicon": "~2.4.2"
   },
   "dependencies": {
@@ -52,6 +53,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.2.2",
+    "react-transition-group": "^2.2.1",
     "redux": "^3.7.2",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -62,7 +64,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "concurrently \"node frontend/scripts/start.js\" \"node server/bin/www\"  \"mongod --dbpath=\"/Users/jeremy/Documents/data/db/\"\"",
+    "START_WITH_DB": "concurrently \"node frontend/scripts/start.js\" \"node server/bin/www\"  \"mongod --dbpath=\"/Users/jeremy/Documents/data/db/\"\"",
+    "start": "concurrently \"node frontend/scripts/start.js\" \"node server/bin/www\"",
     "build": "node frontend/scripts/build.js",
     "test": "node frontend/scripts/test.js --env=jsdom"
   },
