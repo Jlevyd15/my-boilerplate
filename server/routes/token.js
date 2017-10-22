@@ -21,10 +21,20 @@ router.post('/', function(req, res) {
                 token: token
             });
         } else {
-            res.sendStatus(401);
+            // res.sendStatus(401);
+            res.status(401).send({
+                status: 401,
+                messageCode: 1001,
+                message: 'cannot find user with the credentials provided'
+            })
         }
     } else {
-        res.sendStatus(401);
+        // res.sendStatus(401);
+        res.send(401).send({
+            status: 401,
+            messageCode: 1002,
+            message: 'error, email and/or password was not received'
+        })
     }
 });
 

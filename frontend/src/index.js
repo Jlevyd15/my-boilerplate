@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, compose } from 'redux';
+import { storeEnhancer } from 'redux-bug-reporter'
 
 import rootReducer from  './reducers';
 
@@ -13,8 +14,9 @@ const StoreInstance = (initialState) => {
     return createStore(
     	rootReducer,
 		initialState,
-		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    );
+		compose(process.env.NODE_ENV !== 'production' ? storeEnhancer : f => f,
+			window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    ));
 }
 
 ReactDOM.render(
