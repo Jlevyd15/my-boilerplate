@@ -70,7 +70,7 @@ export class Register extends Component {
 	      			</div>	
 		      	</Form>
 	      	</div>
-		);
+		)
 	}
 }
 

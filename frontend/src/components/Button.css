@@ -1,5 +1,5 @@
 .btn {
-	/*height: 30px;*/
+	/*height: 30px*/
 	width: 100%;
 	border-radius: 3px;
 	padding: 10px;
@@ -13,7 +13,7 @@
 .btn-primary {
 	background-color: #979387;
 	color: white;
-}
+};
 
 .btn-secondary {
 	border: 1px solid #979387;

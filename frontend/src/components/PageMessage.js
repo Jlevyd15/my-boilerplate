@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './PageMessage.css'
 import TransientsContainer from '../containers/TransientsContainer'
 import Fade from './Fade'

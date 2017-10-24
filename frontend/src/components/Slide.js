@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Transition from 'react-transition-group/Transition';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Transition from 'react-transition-group/Transition'
 
 class Slide extends Component {
 	constructor(props) {
@@ -47,7 +47,7 @@ class Slide extends Component {
 				opacity: 0,
 				transition: `opacity ${this.props.duration} top ${this.props.duration} ease-out`
 			}
-		};
+		}
 		return (
 			<Transition in={this.state.show} timeout={this.props.duration} className="slide">
 	            {(state) => (
@@ -59,9 +59,9 @@ class Slide extends Component {
 		      		</div>
 	      		)}
 			</Transition>
-		);
+		)
 	}
-};
+}
 
 Slide.defaultProps = {
 	duration: 500
@@ -74,4 +74,4 @@ Slide.propTypes = {
 	direction: PropTypes.string
 }
 
-export default Slide;
+export default Slide

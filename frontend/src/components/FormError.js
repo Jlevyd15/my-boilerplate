@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './FormError.css'
 
 export class FormError extends Component {
@@ -18,7 +18,7 @@ export class FormError extends Component {
 			<div>
 				{this.showFormErrors()}
 			</div>
-		);
+		)
 	}
 }
 

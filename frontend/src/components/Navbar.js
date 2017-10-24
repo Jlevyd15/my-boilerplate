@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './Navbar.css'
+import style from './Navbar.css'
 
 import { config } from '../project.config.js'
 import { isAuthenticated } from '../utils/auth.js'
@@ -25,13 +25,13 @@ export class Navbar extends Component {
 
 	render() {
 		return (
-			<nav className='navbar-container'>
-				<img className="navbar-logo" src="crypto-logo.png" />
+			<nav className={style['navbar-container']}>
+				<img className={style['navbar-logo']} src="crypto-logo.png" alt="" />
 				<ul>
 					{this.getNavbarLinks()}
 				</ul>
 			</nav>
-		);
+		)
 	}
 }
 

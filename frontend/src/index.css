@@ -8,7 +8,7 @@ body {
 	background-size: 70% auto;
 }
 body:after {
-	opacity: 0.2; /* Here is your opacity */
+	opacity: 0.2 /* Here is your opacity */
 }
 h1, h2, h3, h4 {
 	font-family: 'Archivo Black', sans-serif;
