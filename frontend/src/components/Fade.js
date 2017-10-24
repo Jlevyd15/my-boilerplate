@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Transition from 'react-transition-group/Transition';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Transition from 'react-transition-group/Transition'
 
 class Fade extends Component {
 	constructor(props) {
@@ -37,7 +37,7 @@ class Fade extends Component {
 				opacity: 0,
 				transition: 'opacity 1s ease-out'
 			}
-		};
+		}
 		return (
 			<Transition in={this.state.show} timeout={this.props.duration} className="fade">
 	            {(state) => (
@@ -49,9 +49,9 @@ class Fade extends Component {
 		      		</div>
 	      		)}
 			</Transition>
-		);
+		)
 	}
-};
+}
 
 Fade.defaultProps = {
 	duration: 500
@@ -61,4 +61,4 @@ Fade.propTypes = {
 	duration: PropTypes.number
 }
 
-export default Fade;
+export default Fade

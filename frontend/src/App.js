@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import React, { Component } from 'react'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import PageLayout from './pages/PageLayout'
 import { config } from './project.config.js'
@@ -23,7 +23,7 @@ class App extends Component {
           </PageLayout>
         </Switch>
       </BrowserRouter>
-    );
+    )
   }
 }
 
@@ -40,4 +40,4 @@ const MatchWhenAuthorized = ({component: Component, ...rest}) => (
   )}/>
 )
 
-export default App;
+export default App

@@ -23,7 +23,7 @@ export class Login extends Component {
 		console.log('in handleSubmit', email, password)
 
 		// get a token from the server and save it in the browser session storage
-		fetch(`/token`, {
+		fetch('/token', {
 			method: 'POST',
 			headers: new Headers({
 				'Content-Type': 'application/x-www-form-urlencoded'
@@ -64,7 +64,7 @@ export class Login extends Component {
 	      			</div>	
 		      	</Form>
 	      	</div>
-		);
+		)
 	}
 }
 

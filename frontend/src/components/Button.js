@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './Button.css'
 
@@ -12,7 +12,7 @@ export class Button extends Component {
 		const { children, btnStyle, type, callback } = this.props 
 		return (
 			<button onClick={callback} className={btnStyle} type={type || 'button'}>{children}</button>
-		);
+		)
 	}
 }
 

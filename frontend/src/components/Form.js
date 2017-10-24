@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { forms, fields, transient } from '../actions'
 
 import FormError from './FormError'
@@ -41,7 +41,7 @@ export class Form extends Component {
 					{this.props.children}
 				</form>
 			</div>
-		);
+		)
 	}
 }
 

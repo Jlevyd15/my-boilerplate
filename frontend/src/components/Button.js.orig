@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+import React, { Component } from 'react'
+=======
+import React, { Component } from 'react';
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
+import PropTypes from 'prop-types'
+import './Button.css'
+
+export class Button extends Component {
+	callback(e) {
+		console.log('in button callback')
+		const { callback } = this.props
+		if (typeof callback === 'function') callback(e)
+	}
+	render() {
+		const { children, btnStyle, type, callback } = this.props 
+		return (
+			<button onClick={callback} className={btnStyle} type={type || 'button'}>{children}</button>
+<<<<<<< HEAD
+		)
+=======
+		);
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
+	}
+}
+
+Button.propTypes = {
+	children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+	btnStyle: PropTypes.string,
+	type: PropTypes.string,
+	callback: PropTypes.func
+}
+
+export default Button

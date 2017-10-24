@@ -1,7 +1,7 @@
-import Immutable from 'immutable';
-import FormRecord from '../records/formRecord';
+import Immutable from 'immutable'
+import FormRecord from '../records/formRecord'
 
-import { SUBMIT_FORM } from '../actions/actionTypes';
+import { SUBMIT_FORM } from '../actions/actionTypes'
 
 
 const formReducer = (forms = Immutable.Map({}), action) => {
@@ -17,8 +17,8 @@ const formReducer = (forms = Immutable.Map({}), action) => {
 			})
 		}
 		default:
-			return forms;
+			return forms
 	}
 }
 
-export default formReducer;
+export default formReducer

@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
+.input-control {
+	width: 100%;
+	height: 30px;
+	border: none;
+<<<<<<< HEAD
+	/*border: .5px solid grey*/
+=======
+	/*border: .5px solid grey;*/
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
+	font-size: 1em;
+	border-radius: 3px;
+	padding: 0px;
+	background-color: rgba(52, 73, 94, .75);
+	border: 1px solid black;
+	color: white;
+}
+
+.error {
+ 	outline:none;
+ 	border: none;
+    box-shadow:0 0 10px red;
+}

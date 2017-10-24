@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Login from '../components/Login'
 import './LoginPage.css'
 import PageMessage from '../components/PageMessage'
@@ -12,7 +12,7 @@ export class LoginPage extends Component {
 				<h1>Login</h1>
 				<Login />
 			</div>
-		);
+		)
 	}
 }
 

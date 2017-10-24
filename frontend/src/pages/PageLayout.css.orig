@@ -1,0 +1,7 @@
+.page-layout-main-window {
+<<<<<<< HEAD
+	padding: 2em
+=======
+	padding: 2em;
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
+}

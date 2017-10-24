@@ -1,9 +1,7 @@
-
 .register-contianer {
   width: 75%;
   margin: auto;
 }
-
 .register-grid {
   /*width: 70%;*/
   display: grid;
@@ -12,21 +10,18 @@
   grid-auto-rows: minmax(auto, auto);
   position: relative;
 }
-
 .fix-bottom {
   position: relative;
   bottom: -9px;
 }
-
 .one {
   grid-column: 1;
   grid-row: 1;
 }
-.two { 
+.two {
   grid-column: 2;
   grid-row: 1;
 }
-
 .three {
   grid-column: 1;
   grid-row: 2;
@@ -37,7 +32,6 @@
   grid-column: 2;
   grid-row: 2;
 }
-
 .five {
   grid-column: 1;
   grid-row: 3;
@@ -46,7 +40,6 @@
   grid-column: 2;
   grid-row: 3;
 }
-
 .seven {
   grid-column: 1;
   grid-row: 4;
@@ -55,7 +48,6 @@
   grid-column: 2;
   grid-row: 4;
 }
-
 .nine {
   grid-column: 1;
   grid-row: 5;
@@ -64,21 +56,18 @@
   grid-column: 2;
   grid-row: 5;
 }
-
 .eleven {
   grid-column: 2;
   grid-row: 6;
 }
-
 .twelve {
   grid-column: 1;
   grid-row: 6;
 }
-
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
