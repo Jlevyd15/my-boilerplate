@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Transition from 'react-transition-group/Transition'
+=======
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Transition from 'react-transition-group/Transition';
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 
 class Slide extends Component {
 	constructor(props) {
@@ -47,7 +53,11 @@ class Slide extends Component {
 				opacity: 0,
 				transition: `opacity ${this.props.duration} top ${this.props.duration} ease-out`
 			}
+<<<<<<< HEAD
 		}
+=======
+		};
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 		return (
 			<Transition in={this.state.show} timeout={this.props.duration} className="slide">
 	            {(state) => (
@@ -59,9 +69,15 @@ class Slide extends Component {
 		      		</div>
 	      		)}
 			</Transition>
+<<<<<<< HEAD
 		)
 	}
 }
+=======
+		);
+	}
+};
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 
 Slide.defaultProps = {
 	duration: 500
@@ -74,4 +90,8 @@ Slide.propTypes = {
 	direction: PropTypes.string
 }
 
+<<<<<<< HEAD
 export default Slide
+=======
+export default Slide;
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221

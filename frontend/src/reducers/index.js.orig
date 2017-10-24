@@ -1,12 +1,24 @@
 // import individual reducers here
+<<<<<<< HEAD
 import fieldReducer from './fieldReducer'
 import formReducer from './formReducer'
 import transientsReducer from './transientsReducer'
 import { combineReducers } from 'redux'
+=======
+import fieldReducer from './fieldReducer';
+import formReducer from './formReducer';
+import transientsReducer from './transientsReducer';
+import { combineReducers } from 'redux';
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 
 const rootReducer = combineReducers({
 	fields: fieldReducer,
 	forms: formReducer,
 	transients: transientsReducer
+<<<<<<< HEAD
 })
 export default rootReducer
+=======
+});
+export default rootReducer;
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221

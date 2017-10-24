@@ -1,7 +1,11 @@
 import Immutable from 'immutable'
 import FieldRecord from '../records/fieldRecord'
 
+<<<<<<< HEAD
 import { INIT_FIELD, UPDATE_FIELD, ERROR_FIELD } from '../actions/actionTypes'
+=======
+import { INIT_FIELD, UPDATE_FIELD, ERROR_FIELD } from '../actions/actionTypes';
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 
 
 const fieldReducer = (fields = Immutable.Map({}), action) => {

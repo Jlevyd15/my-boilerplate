@@ -1,5 +1,9 @@
 .btn {
+<<<<<<< HEAD
 	/*height: 30px*/
+=======
+	/*height: 30px;*/
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 	width: 100%;
 	border-radius: 3px;
 	padding: 10px;
@@ -13,7 +17,11 @@
 .btn-primary {
 	background-color: #979387;
 	color: white;
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 
 .btn-secondary {
 	border: 1px solid #979387;

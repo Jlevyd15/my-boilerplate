@@ -37,7 +37,11 @@
 }
 
 /* Portrait */
+<<<<<<< HEAD
 @media only screen
+=======
+@media only screen 
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
   and (min-device-width: 375px)
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)

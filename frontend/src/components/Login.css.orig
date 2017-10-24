@@ -1,21 +1,38 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .login-contianer {
 	width: 75%;
 	margin: auto;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .login-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(auto, auto);
   position: relative;
+<<<<<<< HEAD
+
+.one 
+=======
 }
 .one {
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
   grid-column: 1;
   grid-row: 1;
   position: relative;
 	bottom: -9px;
 }
+<<<<<<< HEAD
+.two {
+=======
 .two { 
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
   grid-column: 2;
   grid-row: 1;
 }
@@ -37,10 +54,18 @@
   grid-column: 2;
   grid-row: 3;
 }
+<<<<<<< HEAD
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+=======
+
 /* Portrait */
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 

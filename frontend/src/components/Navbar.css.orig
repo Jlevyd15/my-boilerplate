@@ -5,6 +5,10 @@
 	margin-bottom: 20px;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 	display: flex;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 }
 
 .navbar-container li {
@@ -14,6 +18,10 @@
 	font-size: 1.5em;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .navbar-container a:focus {
 	text-decoration: underline;
 }

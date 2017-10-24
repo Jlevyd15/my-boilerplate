@@ -4,7 +4,11 @@
 	border-radius: 3px;
 	border: 1px solid grey;
 	color: white;
+<<<<<<< HEAD
 	/*width: 100%*/;
+=======
+	/*width: 100%;*/
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 	margin: auto;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }

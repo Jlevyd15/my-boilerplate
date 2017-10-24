@@ -1,27 +1,54 @@
-.register-contianer {
+<<<<<<< HEAD
+.register-contianer {;
   width: 75%;
   margin: auto;
 }
 .register-grid {
+  /*width: 70%*/
+=======
+
+.register-contianer {
+  width: 75%;
+  margin: auto;
+}
+
+.register-grid {
   /*width: 70%;*/
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(auto, auto);
   position: relative;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .fix-bottom {
   position: relative;
   bottom: -9px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .one {
   grid-column: 1;
   grid-row: 1;
 }
+<<<<<<< HEAD
 .two {
   grid-column: 2;
   grid-row: 1;
 }
+=======
+.two { 
+  grid-column: 2;
+  grid-row: 1;
+}
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .three {
   grid-column: 1;
   grid-row: 2;
@@ -32,6 +59,10 @@
   grid-column: 2;
   grid-row: 2;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .five {
   grid-column: 1;
   grid-row: 3;
@@ -40,6 +71,10 @@
   grid-column: 2;
   grid-row: 3;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .seven {
   grid-column: 1;
   grid-row: 4;
@@ -48,6 +83,10 @@
   grid-column: 2;
   grid-row: 4;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .nine {
   grid-column: 1;
   grid-row: 5;
@@ -56,21 +95,40 @@
   grid-column: 2;
   grid-row: 5;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .eleven {
   grid-column: 2;
   grid-row: 6;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 .twelve {
   grid-column: 1;
   grid-row: 6;
 }
+<<<<<<< HEAD
 /* Portrait */
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+;
+=======
 
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
   .register-contianer {
     width: 100%;
   }

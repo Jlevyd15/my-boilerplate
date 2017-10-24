@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+=======
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+>>>>>>> bef0dcb2a82a16260a769788d811600369210221
 import './PageMessage.css'
 import TransientsContainer from '../containers/TransientsContainer'
 import Fade from './Fade'
