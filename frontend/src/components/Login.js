@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import Input from './Input'
 import Form from './Form'
 import Button from './Button'
-import './Login.css'
+import styles from './Login.css'
 import { config } from '../project.config'
 
 const fieldIds = [
@@ -23,7 +23,7 @@ export class Login extends Component {
 		console.log('in handleSubmit', email, password)
 
 		// get a token from the server and save it in the browser session storage
-		fetch('/token', {
+		fetch(config.routes.login.route, {
 			method: 'POST',
 			headers: new Headers({
 				'Content-Type': 'application/x-www-form-urlencoded'
@@ -52,15 +52,15 @@ export class Login extends Component {
 	render() {
 		const { email, password } = config.fields.login
 		return (
-			<div className="login-contianer">
+			<div className={styles['login-contianer']}>
 				<Form id={config.forms.login} submitHandler={this.handleSubmit} fieldIds={fieldIds} >
-					<div className="login-grid">
-						<div className="one"><label>Email</label></div>
-						<div className="two"><Input id={email} dataType="email" required={true} /></div>
-						<div className="three"><label>Password</label></div>
-						<div className="four"><Input id={password} dataType="password" type="password" required={true} /></div>
-						<div className="five"><Button callback={() => this.props.history.push('/register')} btnStyle="btn btn-secondary">Register</Button></div>
-						<div className="six"><Button type="submit" btnStyle="btn btn-primary">Login</Button></div>
+					<div className={styles['login-grid']}>
+						<div className={styles['one']}><label>Email</label></div>
+						<div className={styles['two']}><Input id={email} dataType="email" required={true} /></div>
+						<div className={styles['three']}><label>Password</label></div>
+						<div className={styles['four']}><Input id={password} dataType="password" type="password" required={true} /></div>
+						<div className={styles['five']}><Button callback={() => this.props.history.push('/register')} btnStyle="secondary">Register</Button></div>
+						<div className={styles['six']}><Button type="submit" btnStyle="primary">Login</Button></div>
 	      			</div>	
 		      	</Form>
 	      	</div>

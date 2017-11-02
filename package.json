@@ -26,23 +26,26 @@
     "babel-loader": "7.1.1",
     "babel-preset-react-app": "^3.0.2",
     "babel-runtime": "6.26.0",
+    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
     "css-loader": "0.28.4",
-    "dotenv": "4.0.0",
+    "dotenv": "^4.0.0",
     "eslint": "4.4.1",
     "eslint-config-react-app": "^2.0.0",
     "eslint-loader": "1.9.0",
     "eslint-plugin-flowtype": "2.35.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "0.11.2",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "immutable": "^3.8.1",
     "jest": "20.0.4",
+    "mongoose": "^4.12.4",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
@@ -66,6 +69,7 @@
   "scripts": {
     "START_WITH_DB": "concurrently \"node frontend/scripts/start.js\" \"node server/bin/www\"  \"mongod --dbpath=\"/Users/jeremy/Documents/data/db/\"\"",
     "start": "concurrently \"node frontend/scripts/start.js\" \"node server/bin/www\"",
+    "server": "nodemon app.js",
     "build": "node frontend/scripts/build.js",
     "test": "node frontend/scripts/test.js --env=jsdom"
   },
@@ -107,6 +111,13 @@
       "jsx",
       "node"
     ]
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "frontend/*",
+      "package.json"
+    ],
+    "delay": "2500"
   },
   "babel": {
     "presets": [

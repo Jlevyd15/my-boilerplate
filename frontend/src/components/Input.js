@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fields } from '../actions'
 
-import './Input.css'
+import styles from './Input.css'
 
 class Input extends React.Component {
 	componentWillMount() {
@@ -16,7 +16,7 @@ class Input extends React.Component {
             <input 
             	id={id}
             	placeholder={placeholder}
-            	className={this.props.fieldValid ? 'input-control' : 'input-control error'}
+            	className={this.props.fieldValid ? styles['input-control'] : styles['input-control'] + ' ' + styles['error']}
             	type={type} 
             	onChange={e => handleOnChange(id, e.target.value, dataType, required)}
             />
@@ -25,7 +25,9 @@ class Input extends React.Component {
 }
 
 Input.defaultProps = {
-	type: 'text'
+	type: 'text',
+	required: 'false',
+	dataType: 'alphaNumberic'
 }
 
 Input.propTypes = {

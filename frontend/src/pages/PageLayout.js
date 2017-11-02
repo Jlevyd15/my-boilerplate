@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import './PageLayout.css'
+import styles from './PageLayout.css'
 
 import ReduxBugReporter from 'redux-bug-reporter'
 import 'redux-bug-reporter/dist/redux-bug-reporter.css'
@@ -23,12 +23,12 @@ const customDecode = (state) => {
 const PageLayout = ({ children }) => (
 	<div className="page-layout-contianer">
 		<Navbar />
-		<div className="page-layout-main-window">
+		<div className={styles['page-layout-main-window']}>
 			{children}
 			{process.env.NODE_ENV !== 'production' && 
 				<ReduxBugReporter 
-					submit='http://localhost:3000/bugs'
-					projectName='Test'
+					submit="http://localhost:3000/bugs"
+					projectName="Test"
 					customDecode={customDecode}
 					customEncode={customEncode} 
 				/>}

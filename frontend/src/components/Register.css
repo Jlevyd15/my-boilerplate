@@ -26,7 +26,6 @@
   grid-column: 1;
   grid-row: 2;
   position: relative;
-	bottom: -9px;
 }
 .four {
   grid-column: 2;

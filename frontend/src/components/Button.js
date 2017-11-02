@@ -1,17 +1,27 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './Button.css'
+import styles from './Button.css'
 
 export class Button extends Component {
+	getBtnStyleName() {
+		switch(this.props.btnStyle) {
+			case 'primary':
+				return styles['btn'] + ' ' + styles['btn-primary']
+			case 'secondary':
+				return styles['btn'] + ' ' + styles['btn-secondary']
+			default:
+				return styles['btn'] + ' ' + styles['btn-primary']
+		}
+	}
 	callback(e) {
 		console.log('in button callback')
 		const { callback } = this.props
 		if (typeof callback === 'function') callback(e)
 	}
 	render() {
-		const { children, btnStyle, type, callback } = this.props 
+		const { children, type, callback } = this.props 
 		return (
-			<button onClick={callback} className={btnStyle} type={type || 'button'}>{children}</button>
+			<button onClick={callback} className={this.getBtnStyleName()} type={type || 'button'}>{children}</button>
 		)
 	}
 }

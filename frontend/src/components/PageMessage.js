@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './PageMessage.css'
+import styles from './PageMessage.css'
 import TransientsContainer from '../containers/TransientsContainer'
 import Fade from './Fade'
 
@@ -24,10 +24,10 @@ export class PageMessage extends Component {
 		return (
 			open ?
 			<Fade duration={200}>
-				<div className={`PageMessage-container PageMessage-${severity}`}>
+				<div className={styles[`PageMessage-container PageMessage-${severity}`]}>
 					<span>{message}</span>
 					<a href="#" onClick={this.close} onKeyUp={this.onKeyUp}>
-						<img className="PageMessage-close-icon" src="icons/close_circle_outline.svg" alt="close" />
+						<img className={styles['PageMessage-close-icon']} src="icons/close_circle_outline.svg" alt="close" />
 					</a>
 				</div>
 			</Fade>

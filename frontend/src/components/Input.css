@@ -6,10 +6,18 @@
 	font-size: 1em;
 	border-radius: 3px;
 	padding: 0px;
-	background-color: rgba(52, 73, 94, .75);
-	border: 1px solid black;
-	color: white;
+	/*background-color: rgba(52, 73, 94, .75);*/
+	/*border: 1px solid black;*/
+	/*color: white;*/
+	outline: none;
 }
+
+/*.input-control:active, .input-control:focus {
+	border-bottom: 2px solid #FD4016;
+	border-radius: 0px;
+	transition: border-bottom ease-in 100ms;
+	box-sizing: border-box;
+}*/
 
 .error {
  	outline:none;
