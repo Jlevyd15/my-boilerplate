@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './FormError.css'
+import styles from './FormError.css'
 
 export class FormError extends Component {
 	showFormErrors() {
 		return (
 			this.props.form && !this.props.form.get('valid') ? 
-				<ul className="form-error-list">
+				<ul className={styles['form-error-list']}>
 					{this.props.form ? this.props.form.fieldResults.map((result, index) => (
 						result.get('error') ? <li key={index}>{result.get('error')}</li> : null
 					)) : null}

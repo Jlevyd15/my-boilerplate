@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	div.login-contianer
+		h1 Password reset for #{email}
+		form(method='POST')
+			legend Reset Password
+				div.login-grid
+					div.one
+						label(for='password') New Password
+						input.input-control(type='password', name='password', value='', placeholder='New password', autofocus=true)
+					div.three
+						label(for='passwordConfirm') Confirm Password
+						input.input-control(type='password', name='passwordConfirm', value='', placeholder='Confirm password')
+					div.five
+						button.btn.btn-primary(type='submit') Update Password

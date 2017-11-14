@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { forms, fields, transient } from '../actions'
+import { forms, fields /*transient*/ } from '../actions'
 
 import FormError from './FormError'
 import TransientsContainer from '../containers/TransientsContainer'
@@ -23,7 +23,8 @@ export class Form extends Component {
 		// set state of fields validation in redux
 		fieldValidationResults.fieldResults.forEach(result => this.props.handleFieldErrors(result.id, result.valid, result.error))
 		// show the page level messaging
-		fieldValidationResults.valid ? null :
+		fieldValidationResults.valid ? 
+			this.props.handleToggleTransient('PageMessage-'+ this.props.id, null, null, false) :
 			this.props.handleToggleTransient('PageMessage-'+ this.props.id, 'Error: Please fix the errors and submit again', 'error', true)
 		// set state of form validation in redux
 		this.props.handleFormSubmit(this.props.id, fieldValidationResults)

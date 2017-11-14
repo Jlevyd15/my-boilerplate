@@ -10,10 +10,14 @@ export const config = {
 		register: { route: '/register', name: 'Register', component: Register, secure: false },
 		dashboard: { route: '/dashboard', name: 'Dashboard', component: Landing, secure: true },
 		users: { route: '/getUsers', name: 'Users', component: Users, secure: true },
+		logout: { route: '/logout', name: 'Logout', component: Login, secure: true },
+		forgot: { route: '/forgot', name: 'Forgot', component: Login },
+		reset: { route: '/reset', name: 'Reset', component: Login, secure: true },
 	},
 	forms: {
 		login: 'login.Form',
-		register: 'register.Form'
+		register: 'register.Form',
+		forgot: 'forgotPassword.form'
 	},
 	fields: {
 		login: {
@@ -26,6 +30,9 @@ export const config = {
 			emailConfirm: 'email.confirm.Input.Register',
 			password: 'password.Input.Register',
 			passwordConfirm: 'password.confirm.Input.Register'
+		},
+		forgot: {
+			email: 'email.Input.Forgot'
 		}
 	},
 	modals: {

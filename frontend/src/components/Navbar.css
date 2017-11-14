@@ -1,6 +1,6 @@
 .navbar-container {
 	width: 100%;
-	background-color: #34495E;
+	background-color: #F7F9F9;
 	padding: 10px;
 	margin-bottom: 20px;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
@@ -14,12 +14,12 @@
 	font-size: 1.5em;
 }
 
-.navbar-container a:focus {
+.navbar-container a:hover {
 	text-decoration: underline;
 }
 
 .navbar-container a {
-	color: white;
+	color: #FD4016;
 	text-decoration: none;
 }
 

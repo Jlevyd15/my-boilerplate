@@ -1,9 +1,9 @@
 .register-page-container {
-	background-color: #34495E;
+	background-color: #F7F9F9;
 	padding: 20px;
 	border-radius: 3px;
-	border: 1px solid grey;
-	color: white;
+	/*border: 1px solid grey;*/
+	/*color: white;*/
 	/*width: 100%*/
 	margin: auto;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);

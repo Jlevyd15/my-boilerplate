@@ -9,11 +9,9 @@ import { config } from '../project.config'
 
 import TransientsContainer from '../containers/TransientsContainer'
 
-const fieldIds = [
-	'email.Input.Login', 'password.Input.Login'
-]
+const fieldIds = [ 'email.Input.Forgot' ]
 
-export class Login extends Component {
+export class Forgot extends Component {
 	constructor() {
 		super()
 		this.handleSubmit = this.handleSubmit.bind(this)
@@ -21,16 +19,16 @@ export class Login extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault()
-		const { email, password, history } = this.props
-		console.log('in handleSubmit', email, password)
+		const { email, history } = this.props
+		console.log('in handleSubmit', email)
 
 		// get a token from the server and save it in the browser session storage
-		fetch(config.routes.login.route, {
+		fetch(config.routes.forgot.route, {
 			method: 'POST',
 			headers: new Headers({
 				'Content-Type': 'application/x-www-form-urlencoded'
 			}),
-			body:`password=${password}&email=${email}`
+			body:`email=${email}`
 		})
 		.then(response => {
 			return response.json()
@@ -54,17 +52,14 @@ export class Login extends Component {
 	}
 
 	render() {
-		const { email, password } = config.fields.login
+		const { email } = config.fields.forgot
 		return (
 			<div className={styles['login-contianer']}>
 				<Form id={config.forms.login} submitHandler={this.handleSubmit} fieldIds={fieldIds} >
 					<div className={styles['login-grid']}>
 						<div className={styles['one']}><label>Email</label></div>
 						<div className={styles['two']}><Input id={email} dataType="email" required={true} /></div>
-						<div className={styles['three']}><label>Password</label></div>
-						<div className={styles['four']}><Input id={password} dataType="password" type="password" required={true} /></div>
-						<div className={styles['five']}><Button callback={() => this.props.history.push('/register')} btnStyle="secondary">Register</Button></div>
-						<div className={styles['six']}><Button type="submit" btnStyle="primary">Login</Button></div>
+						<div className={styles['four']}><Button type="submit" btnStyle="primary">Login</Button></div>
 	      			</div>	
 		      	</Form>
 	      	</div>
@@ -73,10 +68,9 @@ export class Login extends Component {
 }
 
 const mapStateToProps = (state, props) => {
-const { email, password } = config.fields.login
+const { email } = config.fields.forgot
 return {
 	email: state.fields.getIn([email, 'value']),
-	password: state.fields.getIn([password, 'value'])
 }}
 
-export default connect(mapStateToProps)(withRouter(TransientsContainer(Login)))
+export default connect(mapStateToProps)(withRouter(TransientsContainer(Forgot)))

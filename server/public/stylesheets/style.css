@@ -6,3 +6,98 @@ body {
 a {
   color: #00B7FF;
 }
+
+.input-control {
+	width: 100%;
+	height: 30px;
+	border: none;
+	/*border: .5px solid grey;*/
+	font-size: 1em;
+	border-radius: 3px;
+	padding: 0px;
+	/*background-color: rgba(52, 73, 94, .75);*/
+	/*border: 1px solid black;*/
+	/*color: white;*/
+	outline: none;
+}
+
+.input-control:active, .input-control:focus {
+	border-bottom: 2px solid #FD4016;
+	border-radius: 0px;
+	transition: border-bottom ease-in 100ms;
+	box-sizing: border-box;
+}
+
+.error {
+ 	outline:none;
+ 	border: none;
+    box-shadow:0 0 10px red;
+}
+
+.btn {
+	/*height: 30px*/
+	width: 100%;
+	border-radius: 3px;
+	padding: 10px;
+	background-color: transparent;
+	border: none;
+	margin-bottom: 20px;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 1em;
+}
+
+.btn-primary {
+	background-color: #FD4016;
+	color: white;
+}
+
+.login-contianer {
+	width: 75%;
+	margin: auto;
+}
+.login-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(auto, auto);
+  position: relative;
+}
+.one {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+	bottom: -9px;
+}
+.two { 
+  grid-column: 2;
+  grid-row: 1;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+	bottom: -9px;
+}
+.four {
+  grid-column: 2;
+  grid-row: 2;
+}
+.five {
+  grid-column: 1;
+  grid-row: 3;
+}
+.six {
+  grid-column: 2;
+  grid-row: 3;
+}
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  .login-contianer {
+    width: 100%;
+  }
+}

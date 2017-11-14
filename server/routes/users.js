@@ -1,12 +1,11 @@
-var express = require('express');
-var router = express.Router();
-var auth = require('../auth.js')();
-var users = require('../users.js');
+var express = require('express')
+var router = express.Router()
+var auth = require('../utils/auth.js')()
 
 /* GET users listing. */
 router.get('/', auth.authenticate(), function(req, res, next) {
-	console.log('in users route ', req.user.id)
-	res.json({ test: 'protected route', users: users[req.user.id - 1] });
-});
+	console.log('in users route ')
+	res.json({ test: 'protected route', users: 'users' })
+})
 
-module.exports = router;
+module.exports = router
