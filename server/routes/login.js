@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const jwt = require('jwt-simple')
-const cfg = require('../utils/config.js')
+// const cfg = require('../utils/config.js')
 const User = require('../models/user')
 const errorRes = require('../utils/errorResPayload.js')
 
@@ -33,22 +33,22 @@ router.post('/', (req, res) => {
 		User.findOne({ 'local.email': email }, (err, user) => {
 			// if there are any errors, return the error before anything else
 			if (err) {
-				res.status(500).send(errorRes(401, 1000, 'error before saving new user'))
+				res.status(500).send(errorRes(401, 1000))
 				return null
 			}
 			// if no user is found, return the message
 			if (!user) { 
-				res.status(401).send(errorRes(401, 1001, 'cannot find user with the credentials provided'))
+				res.status(401).send(errorRes(401, 1001))
 			} else { 
 				user.validPassword(password, user.local.password, (err, result) => {
 					if (err) {
-						res.status(401).send(errorRes(401, 1008, 'error comparing passwords'))
+						res.status(401).send(errorRes(401, 1008))
 						return null
 					} else if (!result) {
-						res.status(401).send(errorRes(401, 1002, 'wrong password'))
+						res.status(401).send(errorRes(401, 1002))
 					} else {
 						// success
-						const token = jwt.encode({ id: user._id }, cfg.jwtSecret)
+						const token = jwt.encode({ id: user._id }, process.env.JWT_SECRET)
 						res.json({ token: token })
 					}
 				})  

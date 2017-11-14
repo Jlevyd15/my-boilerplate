@@ -5,6 +5,7 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+// const flash = require('connect-flash')
 require('dotenv').config()
 
 // require the auth file which contains all auth initialization
@@ -12,9 +13,13 @@ const auth = require('./utils/auth.js')()
 const users = require('./routes/users')
 const login = require('./routes/login')
 const register = require('./routes/register')
+const forgot = require('./routes/forgot')
+const reset = require('./routes/reset')
 const bugs = require('./routes/bugs')
 
 const app = express()
+//set the port to run on one that is specified or 3000
+app.set('port', (process.env.PORT || 3000))
 
 //setup connetion to db
 const options = { useMongoClient: true }
@@ -37,6 +42,8 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
+// app.use(express.session({ cookie: { maxAge: 60000 }}))
+// app.use(flash())
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Here we're initializing the auth process
@@ -44,6 +51,8 @@ app.use(auth.initialize())
 app.use('/users', users)
 app.use('/login', login)
 app.use('/register', register)
+app.use('/forgot', forgot)
+app.use('/reset', reset)
 app.use('/bugs', bugs)
 
 // catch 404 and forward to error handler

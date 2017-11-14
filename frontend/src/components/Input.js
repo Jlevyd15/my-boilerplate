@@ -10,6 +10,10 @@ class Input extends React.Component {
 		const { id, dataType, required, handleInit } = this.props
 		handleInit(id, dataType, required)
 	}
+	// componentWillUnmount() {
+	// 	const { id, handleDelete } = this.props
+	// 	handleDelete(id)
+	// }
 	render() {
 		const { id, placeholder, handleOnChange, dataType, type, required } = this.props
 		return (
@@ -35,6 +39,7 @@ Input.propTypes = {
 	placeholder: PropTypes.string,
 	handleOnChange: PropTypes.func,
 	handleInit: PropTypes.func,
+	handleDelete: PropTypes.func,
 	type: PropTypes.string,
 	required: PropTypes.bool
 }
@@ -46,6 +51,7 @@ const mapStateToProps = (state, props) => ({
 const mapDispatchToProps = (dispatch) => ({
 	handleOnChange: (id, value, dataType, required) => dispatch(fields.change(id, value, dataType, required)),
 	handleInit: (id, dataType, required) => dispatch(fields.init(id, dataType, required)),
+	handleDelete: id => dispatch(fields.delete(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Input)

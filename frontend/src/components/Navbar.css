@@ -14,7 +14,7 @@
 	font-size: 1.5em;
 }
 
-.navbar-container a:focus {
+.navbar-container a:hover {
 	text-decoration: underline;
 }
 

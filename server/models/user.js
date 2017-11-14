@@ -9,7 +9,9 @@ var userSchema = new Schema({
 	local: {
 		name: String,
 		email: String,
-		password: String
+		password: String,
+		resetPasswordToken: String,
+		resetPasswordExpires: Date
 	}
 })
 
@@ -22,7 +24,6 @@ userSchema.methods.generateHash = (password, callback) => {
 }
 // compare plaintext vs. hash
 userSchema.methods.validPassword = (password, savedPass, callback) => {
-	console.log('validPassword ', password)
 	bcrypt.compare(password, savedPass, (err, res) => {
 		console.log('returning validPassword ', res)
 		return callback(err, res)

@@ -12,12 +12,12 @@
 	outline: none;
 }
 
-/*.input-control:active, .input-control:focus {
+.input-control:active, .input-control:focus {
 	border-bottom: 2px solid #FD4016;
 	border-radius: 0px;
 	transition: border-bottom ease-in 100ms;
 	box-sizing: border-box;
-}*/
+}
 
 .error {
  	outline:none;

@@ -4,9 +4,8 @@ var JwtStrategy = require('passport-jwt').Strategy,
 	ExtractJwt = require('passport-jwt').ExtractJwt
 // var users = require('../users.js')
 const User = require('../models/user.js')
-var cfg = require('./config.js')
 var params = {  
-	secretOrKey: cfg.jwtSecret,
+	secretOrKey: process.env.JWT_SECRET,
 	jwtFromRequest: ExtractJwt.fromHeader('token')
 }
 
@@ -46,7 +45,7 @@ module.exports = () => {
 			return passport.initialize()
 		},
 		authenticate: () => {
-			return passport.authenticate('jwt', cfg.jwtSession)
+			return passport.authenticate('jwt', process.env.JWT_SESSION)
 		}
 	}
 }

@@ -1,7 +1,7 @@
 import Immutable from 'immutable'
 import FieldRecord from '../records/fieldRecord'
 
-import { INIT_FIELD, UPDATE_FIELD, ERROR_FIELD } from '../actions/actionTypes'
+import { INIT_FIELD, DELETE_FIELD, UPDATE_FIELD, ERROR_FIELD } from '../actions/actionTypes'
 
 
 const fieldReducer = (fields = Immutable.Map({}), action) => {
@@ -33,6 +33,10 @@ const fieldReducer = (fields = Immutable.Map({}), action) => {
 					error: action.error
 				})
 			})
+		}
+		case DELETE_FIELD: {
+			if (!fields.get(action.id)) return fields
+			return fields.delete(action.id)
 		}
 		default:
 			return fields

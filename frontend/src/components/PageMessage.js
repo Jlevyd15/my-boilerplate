@@ -24,7 +24,7 @@ export class PageMessage extends Component {
 		return (
 			open ?
 			<Fade duration={200}>
-				<div className={styles[`PageMessage-container PageMessage-${severity}`]}>
+				<div className={styles['PageMessage-container'] + ' ' + styles[`PageMessage-${severity}`]}>
 					<span>{message}</span>
 					<a href="#" onClick={this.close} onKeyUp={this.onKeyUp}>
 						<img className={styles['PageMessage-close-icon']} src="icons/close_circle_outline.svg" alt="close" />
